@@ -1,0 +1,24 @@
+{
+  "name": "pw-book-cart-ts",
+  "version": "1.0.0",
+  "description": "Book Cart Automation with Playwright and TS",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test-local": "npx playwright test --config=playwright.local.config.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zac11/pw-book-cart-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zac11/pw-book-cart-ts/issues"
+  },
+  "homepage": "https://github.com/zac11/pw-book-cart-ts#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.32.2"
+  }
+}

@@ -25,4 +25,11 @@ export default class baseFunction {
 async clickOnRolewithName(locator: string, role: "button"| "menuitem"| "alert"){
     await this.page.getByRole(role,{name: `${locator}`}).click()
 }
+
+async navigateTo(link:string){
+    await Promise.all([
+        this.page.waitForNavigation(),
+        this.page.locator(link).click()
+    ]);
+}
 }

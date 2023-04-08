@@ -6,7 +6,7 @@ export default class baseFunction {
 
 
   async waitAndClickonRoleWithName(locator: string, role: "alert"|"button"|"menuitem") {
-   const element = this.page.getByRole(role).filter({hasText: `${locator}`});
+   const element = this.page.getByRole(role, { name: `${locator}` });
     await element.waitFor({
       state: "visible",
     });
@@ -14,7 +14,7 @@ export default class baseFunction {
   }
 
   async waitAndClickRoleByFilter(locator: string, role: "alert"|"button"|"menuitem"){
-    const element = this.page.getByRole(role, { name: `${locator}` });
+    const element = this.page.getByRole(role).filter({hasText: `${locator}`});
     await element.waitFor({
       state: "visible",
     });

@@ -15,6 +15,7 @@ const config: PlaywrightTestConfig ={
   }]],
   
   use: {
+    baseURL: "https://bookcart.azurewebsites.net/",
     actionTimeout: 10,
     trace: 'on-first-retry',
     video: "retain-on-failure",
